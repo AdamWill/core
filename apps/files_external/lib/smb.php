@@ -8,7 +8,9 @@
 
 namespace OC\Files\Storage;
 
-require_once __DIR__ . '/../3rdparty/smb4php/smb.php';
+set_include_path(get_include_path().PATH_SEPARATOR.
+        \OC_App::getAppPath('files_external').'/3rdparty/smb4php');
+require_once 'smb.php';
 
 class SMB extends \OC\Files\Storage\StreamWrapper{
 	private $password;

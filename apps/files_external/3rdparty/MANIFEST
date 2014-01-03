@@ -1,0 +1,85 @@
+OwnCloud files_external 3rdparty manifest
+-----------------------------------------
+
+This tree contains the following 3rdparty modules:
+
+Modules
+-------
+
+Description:
+AWS SDK for PHP
+Version:
+2.4.0
+License:
+ASL 2.0 and MIT
+URL:
+https://aws.amazon.com/sdkforphp/
+Upstream distribution:
+Generated via PHAR from http://pear.amazonwebservices.com/get/sdk-2.4.0.tgz
+PSR-0:
+prefix aws-sdk-php
+Forked:
+no
+Files:
+aws-sdk-php/
+
+Description:
+Dropbox-PHP
+Version:
+~1.0.0
+License:
+MIT
+URL:
+http://www.dropbox-php.com/
+Upstream distribution:
+http://pear.dropbox-php.com/get/Dropbox-1.0.0.tgz
+PSR-0:
+yes
+Forked:
+Several changes introduced without notice in the initial commit,
+https://github.com/owncloud/3rdparty/commit/a86dd5f48fe6dedcb3e66a8194a05af3673480a6
+(manipulations of paths and filenames commented out). Others introduced
+in https://github.com/owncloud/3rdparty/commit/dcaa5378b7b7d3273d250662e83e5e2eba226b57
+Indentation of one line in OAuth/Curl.php changed at some point.
+Files:
+Dropbox/
+
+Description:
+Google APIs Client Library for PHP
+Version:
+0.6.2
+License:
+ASL 2.0
+URL:
+http://code.google.com/p/google-api-php-client/
+Upstream distribution:
+http://google-api-php-client.googlecode.com/files/google-api-php-client-0.6.2.tar.gz
+PSR-0:
+no
+Forked:
+Upstream revision 533 reverted without notice in initial commit:
+http://code.google.com/p/google-api-php-client/source/detail?r=533
+Initial import PR: https://github.com/owncloud/core/pull/3392
+Files:
+google-api-php-client/
+
+Description:
+Stream wrapper to access Windows shared files (smb4php)
+Version:
+~0.8
+License:
+GPLv2+ or LGPL+
+URL:
+http://www.phpclasses.org/package/4129-PHP-Stream-wrapper-to-access-Windows-shared-files.html
+Upstream distribution:
+http://www.phpclasses.org/browse/download/1/file/20566/name/smb.php (not static!)
+PSR-0:
+yes
+Forked:
+Extensively.
+https://github.com/owncloud/3rdparty/commits/c7fd80368a44b171de68dcb80ca3de2878afd9fa/smb4php
+lists changes before move to apps/files_external/3rdparty,
+https://github.com/owncloud/core/commits/master/apps/files_external/3rdparty/smb4php
+lists change since then.
+Files:
+smb4php/
