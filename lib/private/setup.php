@@ -233,7 +233,11 @@ class OC_Setup {
 			file_put_contents(OC_Config::getValue('datadirectory', OC::$SERVERROOT.'/data').'/.ocdata', '');
 
 			// Update htaccess files for apache hosts
-			if (isset($_SERVER['SERVER_SOFTWARE']) && strstr($_SERVER['SERVER_SOFTWARE'], 'Apache')) {
+			if (
+				isset($_SERVER['SERVER_SOFTWARE']) &&
+				strstr($_SERVER['SERVER_SOFTWARE'], 'Apache') &&
+				OC::$server->getConfig()->getSystemValue('check_for_working_htaccess', true)
+			) {
 				self::updateHtaccess();
 				self::protectDataDirectory();
 			}
